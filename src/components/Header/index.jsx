@@ -5,7 +5,7 @@ function Header() {
   return(
     <header>
       <a href='#about'>ABOUT</a>
-      <a href='#portfolio'>PORTFOLIO</a>
+      <a href='#projects'>PROJECTS</a>
       <a href='#resume'>RESUME</a>
       <a href='#contact'>CONTACT</a>
     </header>

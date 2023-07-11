@@ -1,7 +1,7 @@
 import React from "react";
 import About from "../About";
 import Socials from "../Socials";
-import Portfolio from "../Portfolio";
+import Projects from "../Projects";
 
 function Main(){
 
@@ -10,7 +10,7 @@ function Main(){
       <Socials />
       <section id='content'>
         <About />
-        <Portfolio />
+        <Projects />
       </section>
     </main>
   )

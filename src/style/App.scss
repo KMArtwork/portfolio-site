@@ -8,6 +8,12 @@
 .App {
   text-align: center;
   box-sizing: border-box;
+
+  hr{
+    height: 2px;
+    background: linear-gradient(to right, transparent, white 50%, transparent);
+    border: none;
+  }
 }
 
 header{
@@ -27,7 +33,7 @@ header{
 
 main{
   display: flex;
-  padding: 2rem;
+  padding: 0 2rem;
 
   #socials{
     display: flex;
@@ -35,7 +41,7 @@ main{
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    top: 40%;
+    top: 45%;
 
     > *{
       margin: 1rem 0;
@@ -45,9 +51,12 @@ main{
   }
 
   #about{
-    margin: 5rem 0;
     text-align: right;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
   
     h1{
       font-size: 7rem;
@@ -61,22 +70,38 @@ main{
 
     p{
       width: 50%;
-      float: right;
+      // float: right;
     }
   
   }
 
-  #portfolio{
+  #projects{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    hr {
+      margin: 1rem 0;
+      width: 75%;
+      background: linear-gradient(to right, transparent, white 50%);
+    }
+
+    .projects_header{
+      text-align: right;
+      margin: 5rem 0;
+    }
 
     .project_card{
       display: flex;
-      width: 75%;
+      width: 70%;
       float: right;
-      cursor: pointer;
+      // cursor: pointer;
       background-color: transparent;
-      border: 2px solid white;
+      // border: 1px solid white;
       color: white;
       padding: 0.5rem;
+      margin: 1rem 0;
     }
 
     .MuiCardMedia-root{
@@ -90,6 +115,19 @@ main{
       justify-content: space-between;
       text-align: left;
       padding: 0 0.25rem;
+      width: 100%;
+
+      .project_header{
+        display: flex;
+        justify-content: space-between;
+
+        .project_buttons{
+          > * {
+            margin: 0 0.5rem;
+            // background-color: red;
+          }
+        }
+      }
 
       .project_chips{
         > * {

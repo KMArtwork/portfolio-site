@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 import Typography from '@mui/material/Typography';
 
 function ProjectCard({project}){
@@ -15,25 +16,36 @@ function ProjectCard({project}){
   }
 
   return(
-    <Card className="project_card" onClick={() => handleClick(project.repo)}>
-      <CardMedia
-        sx={{height: '200px'}} 
-        image="https://placehold.co/200"
-        title='project title image'
-      />
-      <CardContent>
-        <Typography variant="h4">{project.title}</Typography>
-        <Typography>
-          {project.description}
-        </Typography>
-        <br></br>
-        <div className='project_chips'>
-          {project.tech.map(element => (
-            <Chip variant="outlined" label={element} />
-          ))}
-        </div>
-      </CardContent>
-    </Card>
+    <>
+      <Card className="project_card">
+        <CardMedia
+          sx={{height: '200px'}} 
+          image="https://placehold.co/200"
+          title='project title image'
+        />
+        <CardContent>
+          <div className="project_header">
+            <Typography variant="h4">{project.title}</Typography>
+            <div className="project_buttons">
+              <Button variant="contained" onClick={() => handleClick(project.repo)}>Repo</Button>
+              <Button variant="contained" onClick={() => handleClick(project.repo)}>Site</Button>
+              <Button variant="contained" onClick={() => handleClick(project.repo)}>Info</Button>              
+            </div>
+          </div>
+
+          <Typography>
+            {project.description}
+          </Typography>
+          <br></br>
+          <div className='project_chips'>
+            {project.tech.map(element => (
+              <Chip variant="outlined" label={element} />
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+      <hr />
+    </>
   )
 
 }
