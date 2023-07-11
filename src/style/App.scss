@@ -1,7 +1,13 @@
 @import './reset';
 
+$primary: red;
+$secondary: blue;
+$header: grey;
+$cardeven: green;
+$cardodd: purple;
+
 :root{
-  background-color: rgb(22, 22, 22);
+  background-color: rgb(25, 25, 25);
   color: white;
 }
 
@@ -17,12 +23,9 @@
 }
 
 header{
-  display: flex;
-  justify-content: center;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.127);
-  height: 25px;
   border-bottom: 2px solid white;
+  position: fixed;
 
   a{
     color: white;
@@ -31,22 +34,41 @@ header{
   }
 }
 
+header, footer{
+  display: flex;
+  justify-content: center;
+  background-color: $header;
+  height: 25px;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 10;
+}
+
 main{
   display: flex;
   padding: 0 2rem;
 
   #socials{
     display: flex;
-    // height: 100%;
     flex-direction: column;
     justify-content: center;
     position: fixed;
     top: 45%;
+    z-index: 10;
 
     > *{
       margin: 1rem 0;
       width: 2.5rem;
       height: auto;
+      cursor: pointer;
+      border: 1px solid white;
+      border-radius: 50%;
+      padding: 0.25rem;
+
+      &:hover{
+        color: red;
+        border: 1px solid red;
+      }
     }
   }
 
@@ -97,7 +119,7 @@ main{
       width: 70%;
       float: right;
       // cursor: pointer;
-      background-color: transparent;
+      background-color: $cardodd;
       // border: 1px solid white;
       color: white;
       padding: 0.5rem;
@@ -114,7 +136,8 @@ main{
       flex-direction: column;
       justify-content: space-between;
       text-align: left;
-      padding: 0 0.25rem;
+      padding: 0.5rem 0;
+      padding-left: 2rem;
       width: 100%;
 
       .project_header{
@@ -137,5 +160,93 @@ main{
       }
     }
   }
+
+  #resume{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    hr {
+      margin: 1rem 0;
+      width: 75%;
+      background: linear-gradient(to right, transparent, white 50%);
+    }
+    
+    #resume_header{
+      text-align: right;
+      margin: 5rem 0;
+    }
+
+    h3{
+      text-decoration: underline;
+    }
+
+  }
+
+  #contact{
+    background-color: $primary;
+    padding-top: 5rem;
+    height: 100vh;
+
+    #contact_header{
+      text-align: right;
+
+    }
+
+    #sender_contact_details{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      > :first-child{
+        margin-right: 0.5rem;
+      }
+
+      > :last-child{
+        margin-left: 0.5rem;
+      }
+    }
+
+    #email_form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 20%;
+      height: 70%;
+    }
+
+    .MuiFormControl-root{
+      color: white;
+      margin: 0.5rem 0;
+    }
+
+    .MuiOutlinedInput-notchedOutline, textarea{
+      border-color: white;
+    }
+
+    label{
+      color: white;
+    }
+
+    label.Mui-focused{
+      color: blue;
+    }
+
+    textarea, input{
+      color: white;
+    }
+
+    button{
+      float: left;
+      width: 25%;
+    }
+
+  }
+}
+
+.full_bleed{
+  box-shadow: 0 0 0 100vmax $primary;
+  clip-path: inset(0 -100vmax);
 }
 
