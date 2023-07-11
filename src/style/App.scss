@@ -1,0 +1,103 @@
+@import './reset';
+
+:root{
+  background-color: rgb(22, 22, 22);
+  color: white;
+}
+
+.App {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.127);
+  height: 25px;
+  border-bottom: 2px solid white;
+
+  a{
+    color: white;
+    margin: 0 3rem;
+    text-decoration: none;
+  }
+}
+
+main{
+  display: flex;
+  padding: 2rem;
+
+  #socials{
+    display: flex;
+    // height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 40%;
+
+    > *{
+      margin: 1rem 0;
+      width: 2.5rem;
+      height: auto;
+    }
+  }
+
+  #about{
+    margin: 5rem 0;
+    text-align: right;
+    height: 100vh;
+  
+    h1{
+      font-size: 7rem;
+      padding: 0.5rem 0;
+    }
+  
+    h5{
+      font-size: 1.5rem;
+      padding: 0.5rem 0;
+    }
+
+    p{
+      width: 50%;
+      float: right;
+    }
+  
+  }
+
+  #portfolio{
+
+    .project_card{
+      display: flex;
+      width: 75%;
+      float: right;
+      cursor: pointer;
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 0.5rem;
+    }
+
+    .MuiCardMedia-root{
+      width: 400px;
+      height: 200px;
+    }
+
+    .MuiCardContent-root{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      padding: 0 0.25rem;
+
+      .project_chips{
+        > * {
+          margin: 0 0.5rem;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
