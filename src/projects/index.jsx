@@ -18,7 +18,7 @@ const pokedexClient = {
 const pokedexServer = {
   title: 'Pokdex Plus (Server)',
   repo: 'https://github.com/KMArtwork/pokedex-backend',
-  url: 'https://github.com/KMArtwork/pokedex-backend',
+  url: false,
   description: 'The backend for my Pokedex Plus app. Features include user authorization and authentication, cookies, and datab',
   tech: [
     'Node.js',
@@ -49,8 +49,10 @@ const plantPal = {
   ]
 }
 
-export {
+const projects = [
   pokedexClient,
   pokedexServer,
   plantPal
-}
+];
+
+export default projects;

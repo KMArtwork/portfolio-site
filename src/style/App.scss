@@ -9,7 +9,10 @@ $cardodd: purple;
 :root{
   background-color: rgb(25, 25, 25);
   color: white;
+  text-align: right;
 }
+
+// --------------------------------------
 
 .App {
   text-align: center;
@@ -17,10 +20,18 @@ $cardodd: purple;
 
   hr{
     height: 2px;
+    width: 100%;
     background: linear-gradient(to right, transparent, white 50%, transparent);
     border: none;
   }
 }
+
+.full_bleed{
+  box-shadow: 0 0 0 100vmax $primary;
+  clip-path: inset(0 -100vmax);
+}
+
+// --------------------------------------
 
 header{
   padding: 1rem;
@@ -48,12 +59,15 @@ main{
   display: flex;
   padding: 0 2rem;
 
+  // --------------------------------------
+
   #socials{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: calc(100vh - 25px - (1rem * 2) - 2px);
     position: fixed;
-    top: 45%;
+    top: calc(25px + (1rem * 2) + 2px);
     z-index: 10;
 
     > *{
@@ -72,36 +86,59 @@ main{
     }
   }
 
+  #content{
+    display: grid;
+  }
+
+  // --------------------------------------
+
   #about{
     text-align: right;
+    justify-self: flex-end;
     height: 100vh;
+    width: 75%;
+    position: relative;
+    top: calc(25px + (1rem * 2) + 2px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+
+    > * {
+      margin: 1rem 0;
+    }
   
     h1{
       font-size: 7rem;
-      padding: 0.5rem 0;
+      // padding: 0.5rem 0;
     }
   
     h5{
       font-size: 1.5rem;
-      padding: 0.5rem 0;
+      // padding: 0.5rem 0;
     }
 
     p{
       width: 50%;
       // float: right;
     }
+
+    #about_buttons{
+      display: flex;
+      justify-content: space-evenly;
+      width: 25%;
+    }
   
   }
 
-  #projects{
+  // --------------------------------------
 
+  #projects{
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-self: flex-end;
 
     hr {
       margin: 1rem 0;
@@ -116,7 +153,7 @@ main{
 
     .project_card{
       display: flex;
-      width: 70%;
+      width: 90%;
       float: right;
       // cursor: pointer;
       background-color: $cardodd;
@@ -161,10 +198,29 @@ main{
     }
   }
 
+  // --------------------------------------
+
   #resume{
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    text-align: right;
+    justify-self: flex-end;
+
+    #download_button{
+      color: white;
+      border: 1px solid white;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      
+      svg{
+        height: 3.5rem;
+        width: auto;
+      }
+
+    }
 
     hr {
       margin: 1rem 0;
@@ -173,20 +229,35 @@ main{
     }
     
     #resume_header{
+      display: flex;
+      align-items: center;
       text-align: right;
       margin: 5rem 0;
     }
 
-    h3{
-      text-decoration: underline;
+    .resume_chip{
+      border-color: white;
+      color: white;
+      background: grey;
+      font-size: 1rem;
+      margin: 0.5rem 0.25rem;
+    }
+
+    #languages, #tech_skills, .sub_category{
+      // display: flex;
+      padding: 1rem 0;
     }
 
   }
 
+  // --------------------------------------
+
   #contact{
+    // width: 75%;
+    height: 100vh;
     background-color: $primary;
     padding-top: 5rem;
-    height: 100vh;
+    // justify-self: flex-end;
 
     #contact_header{
       text-align: right;
@@ -245,8 +316,5 @@ main{
   }
 }
 
-.full_bleed{
-  box-shadow: 0 0 0 100vmax $primary;
-  clip-path: inset(0 -100vmax);
-}
+// --------------------------------------
 

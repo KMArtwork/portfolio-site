@@ -5,7 +5,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import Typography from '@mui/material/Typography';
 
 function ProjectCard({project}){
@@ -28,7 +27,7 @@ function ProjectCard({project}){
             <Typography variant="h4">{project.title}</Typography>
             <div className="project_buttons">
               <Button variant="contained" onClick={() => handleClick(project.repo)}>Repo</Button>
-              <Button variant="contained" onClick={() => handleClick(project.repo)}>Site</Button>
+              <Button variant="contained" disabled={project.url ? false : true} onClick={() => handleClick(project.repo)}>Site</Button>
               <Button variant="contained" onClick={() => handleClick(project.repo)}>Info</Button>              
             </div>
           </div>
@@ -44,7 +43,6 @@ function ProjectCard({project}){
           </div>
         </CardContent>
       </Card>
-      <hr />
     </>
   )
 
