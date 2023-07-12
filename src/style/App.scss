@@ -3,9 +3,10 @@
 
 $primary: rgba(0, 0, 0, 0.302);
 $secondary: blue;
-$header: rgb(49, 155, 111);
+$header: rgb(39, 152, 105);
 $cardeven: green;
-$cardodd: rgb(80, 165, 100);
+$cardodd: rgb(52, 119, 95);
+$buttonBg: rgb(24, 106, 73);
 $hoverButton: rgb(12, 206, 106);
 
 :root{
@@ -29,13 +30,13 @@ $hoverButton: rgb(12, 206, 106);
 }
 
 .MuiButton-contained{
-  background-color: rgb(27, 141, 65);
+  background-color: $buttonBg;
 }
 
 // --------------------------------------
 
 .app_bgi{
-  background-color: rgba(18, 32, 44, 0.705);
+  background-color: rgba(18, 32, 44, 0.758);
 
 }
 
@@ -70,6 +71,10 @@ $hoverButton: rgb(12, 206, 106);
 .full_bleed{
   box-shadow: 0 0 0 100vmax $primary;
   clip-path: inset(0 -100vmax);
+}
+
+h1{
+  font-weight: 700 !important;
 }
 
 // --------------------------------------
@@ -170,22 +175,26 @@ main{
     align-items: flex-start;
 
     > * {
-      margin: 1rem 0;
+      margin: 0.5rem 0;
     }
   
     h1{
       font-size: 7rem;
+      // text-align: left;
+      float: left;
+      font-weight: 900;
+      position: relative;
+      right: 5px;
       // padding: 0.5rem 0;
     }
   
     h5{
-      font-size: 1.5rem;
-      // padding: 0.5rem 0;
+      font-size: 3rem;
     }
 
-    p{
+    .blurb{
       width: 50%;
-      // float: right;
+      line-height: 1.5rem;
     }
 
     #about_buttons{
@@ -303,7 +312,7 @@ main{
     .resume_chip{
       border-color: white;
       color: white;
-      background: grey;
+      background: $cardodd;
       font-size: 1rem;
       margin: 0.5rem 0.25rem;
     }
