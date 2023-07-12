@@ -1,10 +1,12 @@
 import React from "react";
+import Socials from "../Socials";
 
 function Footer() {
 
   return(
     <footer>
-      footer content goes here
+      <Socials />
+      <span>© 2023 - Kawika Miller</span>
     </footer>
   )
 

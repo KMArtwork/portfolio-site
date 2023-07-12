@@ -9,13 +9,13 @@ function Main(){
 
   return(
     <main>
-      <Socials />
       <section id='content'>
         <About />
         <Projects />
         <Resume />
         <Contact />
       </section>
+      <Socials />
     </main>
   )
 

@@ -1,5 +1,5 @@
 const pokedexClient = {
-  title: 'Pokdex Plus (Client)',
+  title: 'Pokedex Plus (Client)',
   repo: 'https://github.com/KMArtwork/pokedex',
   url: 'https://kmdevsign-pokedex.netlify.app/',
   description: 'Allows the user to query the PokeAPI and displays the results in a UI that is styled after the Gen 1, Kanto Pokedex.',
@@ -16,7 +16,7 @@ const pokedexClient = {
 }
 
 const pokedexServer = {
-  title: 'Pokdex Plus (Server)',
+  title: 'Pokedex Plus (Server)',
   repo: 'https://github.com/KMArtwork/pokedex-backend',
   url: false,
   description: 'The backend for my Pokedex Plus app. Features include user authorization and authentication, cookies, and datab',

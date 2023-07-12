@@ -6,9 +6,11 @@ import './style/App.scss';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+      <div className='app_bgi'>
+        <Header />
+        <Main />
+        <Footer />        
+      </div>
     </div>
   );
 }

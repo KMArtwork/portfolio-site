@@ -1,22 +1,63 @@
 @import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
-$primary: red;
+$primary: rgba(0, 0, 0, 0.302);
 $secondary: blue;
-$header: grey;
+$header: rgb(49, 155, 111);
 $cardeven: green;
-$cardodd: purple;
+$cardodd: rgb(80, 165, 100);
+$hoverButton: rgb(12, 206, 106);
 
 :root{
   background-color: rgb(25, 25, 25);
   color: white;
-  text-align: right;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.MuiTypography-root, .MuiButtonBase-root, .MuiChip-root, .MuiFormControl-root,
+.MuiFormLabel-root, .MuiInputBase-root {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.MuiButtonBase-root {
+
+  &:hover{
+    background-color: $hoverButton;    
+  }
+
+}
+
+.MuiButton-contained{
+  background-color: rgb(27, 141, 65);
 }
 
 // --------------------------------------
 
+.app_bgi{
+  background-color: rgba(18, 32, 44, 0.705);
+
+}
+
 .App {
   text-align: center;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+  &::before{
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('../assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: rotate(90deg) scale(1.5, 2);
+  }
 
   hr{
     height: 2px;
@@ -41,18 +82,41 @@ header{
   a{
     color: white;
     margin: 0 3rem;
+    padding: 0.5rem;
     text-decoration: none;
+
+    &:hover{
+      color: greenyellow;
+      // border: 1px solid white;
+      // text-decoration: underline;
+    }
   }
 }
 
 header, footer{
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: $header;
   height: 25px;
   width: 100%;
   padding: 1rem 0;
   z-index: 10;
+}
+
+footer{
+  justify-content: space-between;
+
+  #socials {
+    > * {
+      margin: 0 1rem;
+    }
+  }
+  
+  > * {
+    margin: 0 3rem;
+  }
+
 }
 
 main{
@@ -68,6 +132,7 @@ main{
     height: calc(100vh - 25px - (1rem * 2) - 2px);
     position: fixed;
     top: calc(25px + (1rem * 2) + 2px);
+    right: 2rem;
     z-index: 10;
 
     > *{
@@ -80,8 +145,8 @@ main{
       padding: 0.25rem;
 
       &:hover{
-        color: red;
-        border: 1px solid red;
+        color: $hoverButton;
+        border: 1px solid $hoverButton;
       }
     }
   }
@@ -93,16 +158,16 @@ main{
   // --------------------------------------
 
   #about{
-    text-align: right;
-    justify-self: flex-end;
+    text-align: left;
+    justify-self: flex-start;
     height: 100vh;
-    width: 75%;
+    width: 85%;
     position: relative;
     top: calc(25px + (1rem * 2) + 2px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
 
     > * {
       margin: 1rem 0;
@@ -134,27 +199,27 @@ main{
   // --------------------------------------
 
   #projects{
-    width: 75%;
+    width: 85%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-self: flex-end;
+    align-items: flex-start;
+    justify-self: flex-start;
 
     hr {
       margin: 1rem 0;
-      width: 75%;
-      background: linear-gradient(to right, transparent, white 50%);
+      width: 91%;
+      background: linear-gradient(to left, transparent, white 50%);
     }
 
     .projects_header{
-      text-align: right;
+      text-align: left;
       margin: 5rem 0;
     }
 
     .project_card{
       display: flex;
       width: 90%;
-      float: right;
+      float: left;
       // cursor: pointer;
       background-color: $cardodd;
       // border: 1px solid white;
@@ -201,12 +266,12 @@ main{
   // --------------------------------------
 
   #resume{
-    width: 75%;
+    width: 85%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    justify-self: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    justify-self: flex-start;
 
     #download_button{
       color: white;
@@ -224,14 +289,14 @@ main{
 
     hr {
       margin: 1rem 0;
-      width: 75%;
+      width: 85%;
       background: linear-gradient(to right, transparent, white 50%);
     }
     
     #resume_header{
       display: flex;
       align-items: center;
-      text-align: right;
+      text-align: left;
       margin: 5rem 0;
     }
 
@@ -243,8 +308,7 @@ main{
       margin: 0.5rem 0.25rem;
     }
 
-    #languages, #tech_skills, .sub_category{
-      // display: flex;
+    #languages, #tech_skills, .sub_category, #soft_skills{
       padding: 1rem 0;
     }
 
@@ -260,7 +324,7 @@ main{
     // justify-self: flex-end;
 
     #contact_header{
-      text-align: right;
+      text-align: left;
 
     }
 

@@ -105,87 +105,90 @@ function Resume(){
   }
 
   return(
-    <section id='resume'>
-      <Typography variant="h1" id='resume_header'>
-        <Tooltip title='Download My Resume'>
-          <Button onClick={handleDownload} id='download_button'>
-            <Download id='download_icon' />
-          </Button>          
-        </Tooltip>
-        RESUME
-      </Typography>
+    <>
+      <section id='resume'>
+        <Typography variant="h1" id='resume_header'>
+          RESUME
+          <Tooltip title='Download My Resume'>
+            <Button onClick={handleDownload} id='download_button'>
+              <Download id='download_icon' />
+            </Button>          
+          </Tooltip>
+        </Typography>
 
 
 
-      <Typography variant="h3">
-        Languages
-      </Typography>
+        <Typography variant="h3">
+          Languages
+        </Typography>
 
-      <div id='languages'>
-        {languages.map(element => <Chip label={element} className="resume_chip"/>)}
-      </div>
-
-      <hr />
-
-      <Typography variant="h3">
-        Technical Skills
-      </Typography>
-      
-      <div id='tech_skills'>
-        <div className="sub_category">
-          <Typography variant="h5">
-            Popular Libraries, Frameworks, & Environments
-          </Typography>
-          {popular.map(element => <Chip label={element} className="resume_chip"/>)}
+        <div id='languages'>
+          {languages.map(element => <Chip label={element} className="resume_chip"/>)}
         </div>
 
-        <div className="sub_category">
-          <Typography variant="h5">
-            Database Management
-          </Typography>
-          {database.map(element => <Chip label={element} className="resume_chip"/>)}
+        <hr />
+
+        <Typography variant="h3">
+          Technical Skills
+        </Typography>
+        
+        <div id='tech_skills'>
+          <div className="sub_category">
+            <Typography variant="h5">
+              Popular Libraries, Frameworks, & Environments
+            </Typography>
+            {popular.map(element => <Chip label={element} className="resume_chip"/>)}
+          </div>
+
+          <div className="sub_category">
+            <Typography variant="h5">
+              Database Management
+            </Typography>
+            {database.map(element => <Chip label={element} className="resume_chip"/>)}
+          </div>
+
+          <div className="sub_category">
+            <Typography variant="h5">
+              Amazon Web Services
+            </Typography>
+            {amazon.map(element => <Chip label={element} className="resume_chip"/>)}
+          </div>
+
+          <div className="sub_category">
+            <Typography variant="h5">
+              Programming Tools & Concepts
+            </Typography>
+            {tools.map(element => <Chip label={element} className="resume_chip"/>)}
+          </div>
+
+          <div className="sub_category">
+            <Typography variant="h5">
+              Services & Project Management
+            </Typography>
+            {projects.map(element => <Chip label={element} className="resume_chip"/>)}
+          </div>
+
+          <div className="sub_category">
+            <Typography variant="h5">
+              Art, Design, & Game Dev
+            </Typography>
+            {misc.map(element => <Chip label={element} className="resume_chip"/>)}
+          </div>
+
         </div>
+        <hr />
 
-        <div className="sub_category">
-          <Typography variant="h5">
-            Amazon Web Services
-          </Typography>
-          {amazon.map(element => <Chip label={element} className="resume_chip"/>)}
+        <Typography variant="h3">
+          Soft Skills
+        </Typography>
+
+        <div id='soft_skills'>
+          {softSkills.map(element => <Chip label={element} className="resume_chip"/>)}
         </div>
-
-        <div className="sub_category">
-          <Typography variant="h5">
-            Programming Tools & Concepts
-          </Typography>
-          {tools.map(element => <Chip label={element} className="resume_chip"/>)}
-        </div>
-
-        <div className="sub_category">
-          <Typography variant="h5">
-            Services & Project Management
-          </Typography>
-          {projects.map(element => <Chip label={element} className="resume_chip"/>)}
-        </div>
-
-        <div className="sub_category">
-          <Typography variant="h5">
-            Art, Design, & Game Dev
-          </Typography>
-          {misc.map(element => <Chip label={element} className="resume_chip"/>)}
-        </div>
-
-      </div>
-      <hr />
-
-      <Typography variant="h3">
-        Soft Skills
-      </Typography>
-
-      <div id='soft_skills'>
-        {softSkills.map(element => <Chip label={element} className="resume_chip"/>)}
-      </div>
-      <hr />
-    </section>
+      </section>
+      <br/>
+      <hr/>
+    </>
   )
 
 }
