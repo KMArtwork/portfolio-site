@@ -252,7 +252,16 @@ main{
     .MuiCardMedia-root{
       width: 400px;
       height: 200px;
-      background-size: 153%;
+      border: 1px solid white;
+
+      &.cover{
+        background-size: cover;
+      }
+
+      &.contain{
+        background-size: contain;
+        background-color: rgb(25, 25, 25, 0.5);
+      }
     }
 
     .MuiCardContent-root{

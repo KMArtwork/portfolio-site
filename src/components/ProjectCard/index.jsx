@@ -44,8 +44,9 @@ function ProjectCard({project}){
     <>
       <Card className="project_card">
         <CardMedia
-          image={project.screenshots[0]}
+          image={project.logo ? project.logo : project.screenshots[0]}
           title='project title image'
+          className={project.logo ? 'contain' : 'cover'}
         />
         <CardContent>
           <div className="project_header">
@@ -83,13 +84,13 @@ function ProjectCard({project}){
                 <img
                   src={project.screenshots[imgIdx]}
                   title='screenshot from project'
-                  style={{width: '1000px', height: 'auto'}}
+                  style={{width: 'auto', height: '500px'}}
                 />              
               <Button variant="contained" onClick={() => handleImgIdx(1)}>{`>`}</Button>
             </div>
             <hr />
             <p style={{fontWeight: '400', color: 'white', lineHeight: '1.5'}}>
-              {`This was one of the first major projects that I created by myself and I tried to put nearly everything that I knew/know to use here. This web app makes proxy requests to the PokeAPI through the server and then takes the response data and populates it all in the UI. All the components are functional components and all of my state management is handled with redux-toolkit. The UI is composed of React-Bootstrap components with some custom styling here and there and I even implemented some custom themes as well! I'm sure that as I continue to learn more, I will continue to see things that could be further polished and improved but I'm incredibly proud of the hard work that was put into this project and the overall result!`}
+              {project.summary}
             </p>            
           </DialogContent>
       </Dialog>
