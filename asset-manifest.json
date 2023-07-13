@@ -1,14 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.bfbbe9f4.css",
-    "main.js": "/portfolio/static/js/main.2d486ff7.js",
+    "main.css": "/portfolio/static/css/main.b86155f0.css",
+    "main.js": "/portfolio/static/js/main.7b7db435.js",
     "static/media/bg.jpg": "/portfolio/static/media/bg.19c6e56a7aa683c30399.jpg",
+    "static/media/pokedex_items.jpg": "/portfolio/static/media/pokedex_items.b37a7c5e07cffdc30bef.jpg",
+    "static/media/pokedex_teambuilder.jpg": "/portfolio/static/media/pokedex_teambuilder.6625bff629b75ce7fecd.jpg",
+    "static/media/pokedex_main.jpg": "/portfolio/static/media/pokedex_main.d59a07ddb189bf6aa27c.jpg",
+    "static/media/plantpal_logo.png": "/portfolio/static/media/plantpal_logo.a532fd43fca12f80fd07.png",
+    "static/media/plantpal_logs.jpg": "/portfolio/static/media/plantpal_logs.1576f4cce0e23d3a549c.jpg",
+    "static/media/plantpal_main.jpg": "/portfolio/static/media/plantpal_main.a64b251a82e657062f38.jpg",
+    "static/media/plantpal_history.jpg": "/portfolio/static/media/plantpal_history.6b545f4295b2d379a283.jpg",
+    "static/media/plantpal_home.jpg": "/portfolio/static/media/plantpal_home.668df6a52c833d5781a0.jpg",
+    "static/media/star.jpg": "/portfolio/static/media/star.3bbb416c715138c9e113.jpg",
+    "static/media/backendicon.png": "/portfolio/static/media/backendicon.9587865a4d04b3854fbd.png",
     "index.html": "/portfolio/index.html",
-    "main.bfbbe9f4.css.map": "/portfolio/static/css/main.bfbbe9f4.css.map",
-    "main.2d486ff7.js.map": "/portfolio/static/js/main.2d486ff7.js.map"
+    "main.b86155f0.css.map": "/portfolio/static/css/main.b86155f0.css.map",
+    "main.7b7db435.js.map": "/portfolio/static/js/main.7b7db435.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfbbe9f4.css",
-    "static/js/main.2d486ff7.js"
+    "static/css/main.b86155f0.css",
+    "static/js/main.7b7db435.js"
   ]
 }
