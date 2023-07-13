@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.4f37fd77.css",
-    "main.js": "/portfolio/static/js/main.2f777124.js",
+    "main.js": "/portfolio/static/js/main.c5e495d9.js",
     "static/media/bg.jpg": "/portfolio/static/media/bg.19c6e56a7aa683c30399.jpg",
     "static/media/pokedex_items.jpg": "/portfolio/static/media/pokedex_items.b37a7c5e07cffdc30bef.jpg",
     "static/media/pokedex_teambuilder.jpg": "/portfolio/static/media/pokedex_teambuilder.6625bff629b75ce7fecd.jpg",
@@ -15,10 +15,10 @@
     "static/media/backendicon.png": "/portfolio/static/media/backendicon.9587865a4d04b3854fbd.png",
     "index.html": "/portfolio/index.html",
     "main.4f37fd77.css.map": "/portfolio/static/css/main.4f37fd77.css.map",
-    "main.2f777124.js.map": "/portfolio/static/js/main.2f777124.js.map"
+    "main.c5e495d9.js.map": "/portfolio/static/js/main.c5e495d9.js.map"
   },
   "entrypoints": [
     "static/css/main.4f37fd77.css",
-    "static/js/main.2f777124.js"
+    "static/js/main.c5e495d9.js"
   ]
 }
