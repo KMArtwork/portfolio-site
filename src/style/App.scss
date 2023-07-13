@@ -34,6 +34,19 @@ $hoverButton: rgb(12, 206, 106);
   background-color: $buttonBg !important;
 }
 
+#email_alert{
+  &.success{
+    > *{
+      background-color: rgb(26, 167, 57);
+    }
+  }
+  &.fail{
+    > * {
+      background-color: rgb(193, 14, 14);
+    }
+  }
+}
+
 // --------------------------------------
 
 .app_bgi{

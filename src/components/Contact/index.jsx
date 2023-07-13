@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
-import { Typography, Button, CircularProgress } from "@mui/material";
+import { Typography, Button, CircularProgress, Snackbar, Alert } from "@mui/material";
 import axios from "axios";
 
 function Contact() {
   
   const [isSending, setIsSending] = useState(false);
   const [showError, setShowError] = useState(false);
+  const [showSnack, setShowSnack] = useState(true);
+  const [snackMessage, setSnackMessage] = useState('');
+  const [snackSeverity, setSnackSeverity] = useState('success');
+
+  const handleSnack = (message, severity) => {
+    setSnackMessage(message);
+    setSnackSeverity(severity);
+    setShowSnack(true);
+  }
 
   const sendEmail = async (event) => {
     event.preventDefault();
@@ -26,10 +35,12 @@ function Contact() {
         message: event.target.message.value,
       });
       setIsSending(false);
+      handleSnack('Email successfully sent!', 'success');
       console.log(response)
     }
     catch(e){
       setIsSending(false);
+      handleSnack('Error sending email - Try again.', 'error');
       console.error(e)
     }
 
@@ -83,9 +94,24 @@ function Contact() {
         <Button variant="contained" type="submit" >
           {isSending ? <CircularProgress size='1.55rem' color='inherit' /> : 'SEND'}
         </Button>
-
+        <br/>
+        {isSending ? <p>Please be patient, it may take a while for the server to spin up if it was inactive</p> : <p style={{visibility:'hidden'}}>here for consistency</p>}
       </form>
+
       {showError ? 'Please wait until email is done sending...' : null}
+      <Snackbar
+        id='email_alert'
+        open={showSnack}
+        autoHideDuration={4000}
+        onClose={() => setShowSnack(false)}
+        style={{color: 'white'}}
+        anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
+        key={'bottom center'}
+      >
+        <Alert onClose={() => setShowSnack(false)} severity={snackSeverity} variant="filled">
+          {snackMessage}
+        </Alert>
+      </Snackbar>
     </section>
   )
 
