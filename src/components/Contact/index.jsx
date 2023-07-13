@@ -7,7 +7,7 @@ function Contact() {
   
   const [isSending, setIsSending] = useState(false);
   const [showError, setShowError] = useState(false);
-  const [showSnack, setShowSnack] = useState(true);
+  const [showSnack, setShowSnack] = useState(false);
   const [snackMessage, setSnackMessage] = useState('');
   const [snackSeverity, setSnackSeverity] = useState('success');
 
