@@ -186,9 +186,9 @@ main{
     justify-content: center;
     align-items: flex-start;
 
-    > * {
-      margin: 0.5rem 0;
-    }
+    // > * {
+    //   margin: 0.5rem 0;
+    // }
   
     h1{
       font-size: 7rem;
@@ -205,14 +205,21 @@ main{
     }
 
     .blurb{
-      width: 50%;
+      width: 70%;
       line-height: 1.5rem;
     }
 
     #about_buttons{
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       width: 25%;
+
+      > * {
+        padding: 0.5rem 1rem;
+        > svg {
+          margin-left: 0.75rem;
+        }
+      }
     }
   
   }

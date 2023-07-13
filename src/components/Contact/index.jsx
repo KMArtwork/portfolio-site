@@ -1,37 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, CircularProgress } from "@mui/material";
+import axios from "axios";
 
 function Contact() {
+  
+  const [isSending, setIsSending] = useState(false);
+  const [showError, setShowError] = useState(false);
 
-  // let transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   auth: {
-  //     user: process.env.EMAIL_USERNAME,
-  //     password: process.env.EMAIL_PASSWORD
-  //   },
-  // });
+  const sendEmail = async (event) => {
+    event.preventDefault();
 
-  // const sendMail = async () => {
+    if(isSending){
+      setShowError(true);
+      console.log('Please wait until the email is done sending');
+      return;
+    }
 
-  //   try{
-  //     const sent = await transporter.sendMail({
-  //       from: ' "Fake Guy" <fake@gmail.com>',
-  //       to: 'kmillerdevsign@gmail.com',
-  //       subject: 'test subject',
-  //       text: 'Hello mf',
-  //       html: "<b>Yo bruh</b>"
-  //     });
+    try {
+      setIsSending(true);
+      let response = await axios.post(`${process.env.REACT_APP_SERVER}/email`, {
+        senderName: event.target.name.value,
+        senderEmail: event.target.email.value,
+        subject: event.target.subject.value,
+        message: event.target.message.value,
+      });
+      setIsSending(false);
+      console.log(response)
+    }
+    catch(e){
+      setIsSending(false);
+      console.error(e)
+    }
 
-  //     console.log(sent);
-  //   }
-  //   catch(e){
-  //     console.error('UNABLE TO SEND EMAIL', e);
-  //   }
-
-
-  //   console.log('message has been sent!')
-  // }
+    setShowError(false);
+  }
 
   return(
     <section id="contact" className="full_bleed">
@@ -40,8 +43,8 @@ function Contact() {
         CONTACT
       </Typography>
 
-      <div id='email_form'>
-
+      <form id='email_form' onSubmit={sendEmail}>
+        
         <div id='sender_contact_details'>
           <TextField
             fullWidth 
@@ -77,10 +80,12 @@ function Contact() {
           placeholder="Your message"
         />
 
-        <Button variant="contained">SEND</Button>
+        <Button variant="contained" type="submit" >
+          {isSending ? <CircularProgress size='1.55rem' color='inherit' /> : 'SEND'}
+        </Button>
 
-      </div>
-
+      </form>
+      {showError ? 'Please wait until email is done sending...' : null}
     </section>
   )
 
