@@ -70,7 +70,7 @@ function Contact() {
         <TextField 
           fullWidth
           multiline
-          minRows={5}
+          minRows={8}
           required
           id='message'
           label='Message'

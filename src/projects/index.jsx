@@ -12,6 +12,11 @@ const pokedexClient = {
     'Basic Pokemon Info',
     'Team Builder',
     'Items Tab'
+  ],
+  screenshots: [
+    require('../assets/pokedex_main.JPG'),
+    require('../assets/pokedex_teambuilder.JPG'),
+    require('../assets/pokedex_items.JPG'),
   ]
 }
 
@@ -31,6 +36,9 @@ const pokedexServer = {
     'User Authorization and Authentication',
     'Access & Refresh Tokens as HTTP only cookies',
     "Bearer Auth protected routes for database management of user's teams"
+  ],
+  screenshots: [
+    require('../assets/pokedex_main.JPG')
   ]
 }
 
@@ -46,7 +54,15 @@ const plantPal = {
     'Mongoose',
     'MongoDB',
     'Raspberry Pi',
-  ]
+  ],
+  features: [
+    'User Authorization and Authentication',
+    'Access & Refresh Tokens as HTTP only cookies',
+    "Bearer Auth protected routes for database management of user's teams"
+  ],
+  screenshots: [
+    require('../assets/pokedex_main.JPG')
+  ],
 }
 
 const projects = [

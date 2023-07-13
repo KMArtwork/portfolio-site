@@ -9,7 +9,7 @@ function Projects(){
   return(
     <>
       <section id='projects'>
-        <Typography variant="h1" className="projects_header">
+        <Typography variant="h1" className="projects_header" >
           PROJECTS
         </Typography>
 
