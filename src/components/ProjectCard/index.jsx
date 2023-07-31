@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Modal, Dialog, DialogTitle, DialogContent, DialogActions, Card, CardContent, CardMedia, Chip, Button, Typography, Box } from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, Card, CardContent, CardMedia, Chip, Button, Typography } from "@mui/material";
 
 function ProjectCard({project}){
 
@@ -25,19 +25,6 @@ function ProjectCard({project}){
       console.log(newIdx);
       setImgIdx(newIdx)
     }
-  }
-
-  const boxStyle = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    padding: '1rem',
-    width: 400,
-    backgroundColor: 'grey',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
   }
 
   return(
@@ -84,6 +71,7 @@ function ProjectCard({project}){
                 <img
                   src={project.screenshots[imgIdx]}
                   title='screenshot from project'
+                  alt={`screenshot of project ${project.title}`}
                   style={{width: 'auto', height: '500px'}}
                 />              
               <Button variant="contained" onClick={() => handleImgIdx(1)}>{`>`}</Button>

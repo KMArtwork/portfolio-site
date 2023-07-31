@@ -72,10 +72,36 @@ const plantPal = {
   logo: require('../assets/plantpal_logo.png'),
 }
 
+const allMart = {
+  title: 'All-Mart',
+  repo: 'https://github.com/KMArtwork/storefront',
+  url: 'https://kmdev-storefront.netlify.app/',
+  description: 'An mock e-commerce website that fetches all products and product categories from a server and renders them to the screen - complete with a landing page, cart, and checkout page.',
+  summary: 'This was another solo project that allowed me to test my understanding of React, React Router, and Redux-Toolkit. Using the Material UI library, every product and product category is fetched from a server and then conditionally rendered to the web page as cards. Users are able to all products or view products by their specified categories. Each product card has a "details" button which will display a page with more detailed information about the product. Users can also add various items to their cart, modify the quantity of the items as they see fit, and see their total before proceeding to checkout. This is not an actual ecommerce site so there are a few features &/o components of the website that are purely placeholders.',
+  tech: [
+    'React',
+    'React Router',
+    'Redux-Toolkit',
+    'Material UI',
+  ],
+  features: [
+
+  ],
+  screenshots: [
+    require('../assets/allmart_landing.png'),
+    require('../assets/allmart_productview.png'),
+    require('../assets/allmart_sidecart.png'),
+    require('../assets/allmart_checkout.png'),
+    require('../assets/allmart_categoryfilter.png'),
+    require('../assets/allmart_categories.png'),
+  ]
+}
+
 const projects = [
   pokedexClient,
   pokedexServer,
-  plantPal
+  plantPal,
+  allMart
 ];
 
 export default projects;
