@@ -1,11 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e580476c.css",
-    "main.js": "/portfolio/static/js/main.398a2dd5.js",
+    "main.css": "/portfolio/static/css/main.475c213d.css",
+    "main.js": "/portfolio/static/js/main.1fe5baa3.js",
     "static/media/bg.jpg": "/portfolio/static/media/bg.19c6e56a7aa683c30399.jpg",
+    "static/media/allmart_landing.png": "/portfolio/static/media/allmart_landing.d497288bc105107cae23.png",
+    "static/media/allmart_categories.png": "/portfolio/static/media/allmart_categories.9c0255a85218449d3d33.png",
+    "static/media/allmart_sidecart.png": "/portfolio/static/media/allmart_sidecart.fa958207f0ba8075b446.png",
     "static/media/pokedex_items.jpg": "/portfolio/static/media/pokedex_items.b37a7c5e07cffdc30bef.jpg",
     "static/media/pokedex_teambuilder.jpg": "/portfolio/static/media/pokedex_teambuilder.6625bff629b75ce7fecd.jpg",
     "static/media/pokedex_main.jpg": "/portfolio/static/media/pokedex_main.d59a07ddb189bf6aa27c.jpg",
+    "static/media/allmart_categoryfilter.png": "/portfolio/static/media/allmart_categoryfilter.4cddcc708716d42d50b2.png",
+    "static/media/allmart_productview.png": "/portfolio/static/media/allmart_productview.d3907fd386b936cc1894.png",
+    "static/media/allmart_checkout.png": "/portfolio/static/media/allmart_checkout.1618aec81da2816566b5.png",
     "static/media/plantpal_logo.png": "/portfolio/static/media/plantpal_logo.a532fd43fca12f80fd07.png",
     "static/media/plantpal_logs.jpg": "/portfolio/static/media/plantpal_logs.1576f4cce0e23d3a549c.jpg",
     "static/media/plantpal_main.jpg": "/portfolio/static/media/plantpal_main.a64b251a82e657062f38.jpg",
@@ -14,11 +20,11 @@
     "static/media/star.jpg": "/portfolio/static/media/star.3bbb416c715138c9e113.jpg",
     "static/media/backendicon.png": "/portfolio/static/media/backendicon.9587865a4d04b3854fbd.png",
     "index.html": "/portfolio/index.html",
-    "main.e580476c.css.map": "/portfolio/static/css/main.e580476c.css.map",
-    "main.398a2dd5.js.map": "/portfolio/static/js/main.398a2dd5.js.map"
+    "main.475c213d.css.map": "/portfolio/static/css/main.475c213d.css.map",
+    "main.1fe5baa3.js.map": "/portfolio/static/js/main.1fe5baa3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e580476c.css",
-    "static/js/main.398a2dd5.js"
+    "static/css/main.475c213d.css",
+    "static/js/main.1fe5baa3.js"
   ]
 }
